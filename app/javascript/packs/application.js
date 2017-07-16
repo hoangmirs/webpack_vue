@@ -8,3 +8,10 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
+import Vue from 'vue'
+import App from './app.vue'
+
+document.addEventListener('turbolinks:load', () => {
+  const app = new Vue(App).$mount('app')
+  console.log(app)
+})
