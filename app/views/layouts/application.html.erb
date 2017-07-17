@@ -3,12 +3,18 @@
   <head>
     <title>WebpackVue</title>
     <%= csrf_meta_tags %>
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/simple-line-icons.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= stylesheet_pack_tag "application" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= javascript_pack_tag "application" %>
   </head>
 
   <body>
+    <app></app>
     <%= yield %>
   </body>
 </html>
